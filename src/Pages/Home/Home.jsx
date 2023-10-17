@@ -1,10 +1,13 @@
 import Banner from "../Banner/Banner";
+import Brands from "../Brands/Brands";
+
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h1 className="text-2xl font-poppins">Hello</h1>
+            <Brands></Brands>
+
         </div>
     );
 };
