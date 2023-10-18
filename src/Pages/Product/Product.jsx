@@ -13,20 +13,22 @@ const Product = ({ product }) => {
                 <div className="card-body">
                     <h2 className='text-xl font-bold text-center'> {name} </h2>
 
+                    <hr />
+
                     <div className='flex justify-between'>
                         <div>
-                            <h3 className='text-base font-bold'>Brand: <span className='text-sm font-normal'>{brand_name}</span></h3>
+                            <h3 className='text-base font-bold'>Brand: <span className='text-sm font-semibold'>{brand_name}</span></h3>
                         </div>
                         <div>
-                            <h3 className='text-base font-bold'>Type: <span className='text-sm font-normal'>{type}</span> </h3>
+                            <h3 className='text-base font-bold'>Type: <span className='text-sm font-semibold'>{type}</span> </h3>
                         </div>
                     </div>
 
                     <div >
-                        <h2 className='text-base font-bold'>Price: <span className='text-sm font-normal'>${price}</span> </h2>
+                        <h2 className='text-base font-bold'>Price: <span className='text-sm font-semibold'>${price}</span> </h2>
 
                         <div className='flex items-center gap-3'>
-                            <h3 className='text-base font-semibold'>Rating <span className='text-sm font-normal'>{rating}</span> </h3>
+                            <h3 className='text-base font-semibold'>Rating: <span className='text-sm font-semibold'>{rating}</span> </h3>
 
                             <div className="rating w-24">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />

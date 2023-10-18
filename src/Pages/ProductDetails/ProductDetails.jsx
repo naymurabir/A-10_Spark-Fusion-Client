@@ -1,5 +1,6 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee"
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
 
@@ -12,6 +13,29 @@ const ProductDetails = () => {
     const navigate = useNavigate()
     const handleGoHome = () => {
         navigate('/')
+    }
+
+    const handleAddToCart = () => {
+        fetch('http://localhost:5000/carts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(details)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Add to Cart is Successful.',
+                        showConfirmButton: false,
+                        timer: 1500,
+                    })
+                }
+            })
     }
 
     return (
@@ -29,8 +53,10 @@ const ProductDetails = () => {
                         <h3 className='text-xl font-semibold flex items-center mt-2'> Price: <span className="text-lg ml-1">${price}</span>  </h3>
                         <h3 className="text-xl font-semibold"> Brand:  <span className="text-lg">{brand_name}</span> </h3>
 
-                        <div className="pt-4">
+                        <div className="pt-4 flex gap-5">
                             <button onClick={handleGoHome} className='text-white font-semibold bg-rose-600 hover:bg-rose-400 px-4 py-1 rounded'>Go Home</button>
+
+                            <button onClick={handleAddToCart} className='text-white font-semibold bg-rose-600 hover:bg-rose-400 px-4 py-1 rounded'> Add to Cart </button>
                         </div>
                     </div>
                 </div>

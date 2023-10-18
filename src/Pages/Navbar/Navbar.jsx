@@ -7,7 +7,7 @@ const Navbar = () => {
 
         <NavLink to="/addProduct" className="text-base mr-3 font-semibold">Add Product</NavLink>
 
-        <NavLink to="/myCart" className="text-base font-semibold">My Cart</NavLink>
+        <NavLink to="/carts" className="text-base font-semibold">My Cart</NavLink>
     </>
 
     return (
