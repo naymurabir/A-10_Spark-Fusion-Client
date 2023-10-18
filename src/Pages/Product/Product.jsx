@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
 
-    const { name, image, brand_name, type, price, rating } = product
+    const { _id, name, image, brand_name, type, price, rating } = product
 
     return (
         <div>
@@ -38,8 +39,14 @@ const Product = ({ product }) => {
                     </div>
 
                     <div className='flex flex-col md:flex-row justify-between gap-3 mt-2'>
-                        <button className='text-lg text-white font-semibold bg-rose-600 px-3 py-1 rounded w-full'>Details</button>
-                        <button className='text-lg text-white font-semibold bg-rose-600 px-3 py-1 rounded w-full'>Update</button>
+
+                        <Link to={`/details/${_id}`} className='w-full'>
+                            <button className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Details</button>
+                        </Link>
+
+                        <Link className='w-full'>
+                            <button className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Update</button>
+                        </Link>
                     </div>
                 </div>
             </div>

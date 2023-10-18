@@ -32,7 +32,7 @@ const AddProduct = () => {
                         icon: 'success',
                         title: 'A product is added Successfully.',
                         showConfirmButton: false,
-                        timer: 1000
+                        timer: 1000,
                     })
                 }
                 e.target.reset()

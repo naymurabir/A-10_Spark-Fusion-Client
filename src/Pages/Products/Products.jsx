@@ -12,7 +12,6 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const Products = () => {
 
     const brandProducts = useLoaderData()
-    console.log(brandProducts);
 
     return (
         <div>
