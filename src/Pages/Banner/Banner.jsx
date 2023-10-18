@@ -14,15 +14,15 @@ const Banner = () => {
                 </div>
 
             </div>
-            <div className="absolute left-0 bottom-0 bg-opacity-50 bg-white hidden md:block">
+            <div className="absolute left-0 bottom-0 bg-opacity-50 bg-black hidden md:block">
                 <Marquee pauseOnHover speed={100}>
-                    <div className="flex gap-10">
+                    <div className="flex md:gap-10 lg:gap-20">
 
                         <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/PGqCS4r/apple.jpg" alt="" />
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/RSBcXp8/intel.jpg" alt="" />
+                        {/* <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/RSBcXp8/intel.jpg" alt="" />
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/ry7hMKD/lenovo.jpg" alt="" />
+                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/ry7hMKD/lenovo.jpg" alt="" /> */}
 
                         <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/Wy9fJb1/xiaomi.jpg" alt="" />
 
