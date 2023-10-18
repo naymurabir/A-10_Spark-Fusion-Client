@@ -18,19 +18,15 @@ const Banner = () => {
                 <Marquee pauseOnHover speed={100}>
                     <div className="flex md:gap-10 lg:gap-20">
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/PGqCS4r/apple.jpg" alt="" />
-
-                        {/* <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/RSBcXp8/intel.jpg" alt="" />
-
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/ry7hMKD/lenovo.jpg" alt="" /> */}
+                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/Zdf9Mq7/apple2.jpg" alt="" />
 
                         <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/Wy9fJb1/xiaomi.jpg" alt="" />
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/zSV2h1R/samsung.jpg" alt="" />
+                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/2vfTnGN/samsung-Logo.jpg" alt="" />
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/7jtYYBT/sony.jpg" alt="" />
+                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/fdxK5Wx/sonyLogo.jpg" alt="" />
 
-                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/Wy9fJb1/xiaomi.jpg" alt="" />
+                        <img className="w-12 md:w-28 rounded" src="https://i.ibb.co/gDp2sx4/nokia.webp" alt="" />
 
                         <img className="w-12 md:w-28 rounded mr-10" src="https://i.ibb.co/RSBcXp8/intel.jpg" alt="" />
 

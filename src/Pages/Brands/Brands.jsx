@@ -19,7 +19,7 @@ const Brands = () => {
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-800">Our Brands</h1>
                 <hr className="my-3" />
 
-                <p> Welcome to Spark Fusion - Your Premier Destination for Cutting-Edge Tech Products! Explore a wide range of innovative gadgets, electronics, and accessories that cater to tech enthusiasts and novices alike. Shop with confidence, knowing you are getting top-quality tech gear and expert customer support. Upgrade your digital lifestyle today at Tech Products! </p>
+                <p> Simplify your tech research by accessing a diverse array of brands and products all in one place. Whether you are looking for smartphones, laptops, gaming gear, or home electronics. Explore the latest innovations and compare prices, specifications, and user reviews effortlessly. Say goodbye to endless searches and hello to efficient tech discovery!</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 lg:my-10">
