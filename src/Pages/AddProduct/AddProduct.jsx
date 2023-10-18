@@ -6,13 +6,13 @@ const AddProduct = () => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         const name = form.get('name')
-        const brand = form.get('brand')
+        const brand_name = form.get('brand')
         const image = form.get('image')
         const type = form.get('type')
         const price = form.get('price')
         const rating = form.get('rating')
         const description = form.get('description')
-        const products = { name, brand, image, type, price, rating, description };
+        const products = { name, brand_name, image, type, price, rating, description };
 
         console.log(products);
 
@@ -30,7 +30,7 @@ const AddProduct = () => {
                     Swal.fire({
                         position: 'top-center',
                         icon: 'success',
-                        title: 'Your work has been saved',
+                        title: 'A product is added Successfully.',
                         showConfirmButton: false,
                         timer: 1000
                     })
