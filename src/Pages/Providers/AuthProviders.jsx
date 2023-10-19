@@ -70,4 +70,5 @@ const AuthProviders = ({ children }) => {
 AuthProviders.propTypes = {
     children: PropTypes.node.isRequired
 }
+
 export default AuthProviders;
