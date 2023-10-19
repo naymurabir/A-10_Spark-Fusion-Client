@@ -125,7 +125,7 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold">Description</span>
                                 </label>
-                                <textarea name="description" id="" cols="20" rows="5" placeholder="Description..." className="input input-bordered w-full  text-sm" ></textarea>
+                                <textarea name="description" id="" cols="20" rows="5" placeholder="Description..." className="input input-bordered w-full  text-sm h-[100px]" ></textarea>
                             </div>
                         </div>
 
