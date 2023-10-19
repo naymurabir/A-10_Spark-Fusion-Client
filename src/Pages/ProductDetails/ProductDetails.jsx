@@ -10,6 +10,7 @@ const ProductDetails = () => {
 
     const { name, image, brand_name, price, description } = details
 
+
     const navigate = useNavigate()
     const handleGoHome = () => {
         navigate('/')

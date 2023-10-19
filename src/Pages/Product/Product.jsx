@@ -46,7 +46,7 @@ const Product = ({ product }) => {
                             <button className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Details</button>
                         </Link>
 
-                        <Link className='w-full'>
+                        <Link to={`/update/${_id}`} className='w-full'>
                             <button className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Update</button>
                         </Link>
                     </div>

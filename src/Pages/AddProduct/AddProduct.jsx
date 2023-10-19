@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import './AddProduct.css'
 import { useState } from "react";
 
 const AddProduct = () => {
@@ -74,12 +73,12 @@ const AddProduct = () => {
                                     onChange={(e) => setSelectedValue(e.target.value)}
                                 >
                                     <option>Select Option Brand</option>
-                                    <option value="Google" >Apple</option>
-                                    <option value="Nokia">Samsung</option>
+                                    <option value="Samsung" >Samsung</option>
+                                    <option value="Nokia">Nokia</option>
                                     <option value="Intel">Intel</option>
                                     <option value="Sony">Sony</option>
-                                    <option value="Apple">Nokia</option>
-                                    <option value="Samsung">Xiaomi</option>
+                                    <option value="Apple">Apple</option>
+                                    <option value="Xiaomi">Xiaomi</option>
                                 </select>
 
                             </div>
