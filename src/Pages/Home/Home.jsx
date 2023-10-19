@@ -4,6 +4,7 @@ import Brands from "../Brands/Brands";
 
 const Home = () => {
     return (
+
         <div>
             <Banner></Banner>
             <Brands></Brands>

@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import swal from "sweetalert";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
 
@@ -24,12 +25,30 @@ const LoginPage = () => {
                 const user = result.user
                 navigate(location?.state ? location.state : '/')
                 console.log(user);
-                swal("User logged in successfully.")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'User logged in successfully.',
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
                 e.target.reset()
             })
             .catch(error => {
                 console.log("Error", error.message);
-                swal("Your email / password is invalid.");
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: "Your email / password is invalid.",
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
             })
     }
     const handleGoogleLogIn = () => {
@@ -38,7 +57,16 @@ const LoginPage = () => {
                 const user = result.user
                 navigate(location?.state ? location.state : '/')
                 console.log(user);
-                swal("User logged in successfully.")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'User logged in successfully.',
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
             })
             .catch(error => {
                 console.log("Error", error.message);
@@ -52,7 +80,16 @@ const LoginPage = () => {
                 const user = result.user
                 navigate(location?.state ? location.state : '/')
                 console.log(user);
-                swal("User logged in successfully.")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'User logged in successfully.',
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
             })
             .catch(error => {
                 console.log("Error", error.message);

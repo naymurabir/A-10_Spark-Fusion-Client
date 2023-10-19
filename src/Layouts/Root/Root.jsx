@@ -3,6 +3,7 @@ import Navbar from "../../Pages/Navbar/Navbar";
 
 const Root = () => {
     return (
+
         <div className="max-w-screen-xl mx-auto px-2 md:px-12 lg:px-20 font-poppins">
             <Navbar></Navbar>
             <Outlet></Outlet>

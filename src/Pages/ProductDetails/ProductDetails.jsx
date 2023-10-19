@@ -33,8 +33,12 @@ const ProductDetails = () => {
                         icon: 'success',
                         title: 'Congratulations! Product has been added to My Cart Page.',
                         showConfirmButton: false,
-                        timer: 2000,
+                        background: '#343436',
+                        heightAuto: '100px',
+                        color: 'white',
+                        timer: 2000
                     })
+
                 }
             })
     }

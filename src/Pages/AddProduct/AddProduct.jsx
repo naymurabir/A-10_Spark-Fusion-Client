@@ -31,11 +31,14 @@ const AddProduct = () => {
                 console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
                         title: 'A product is added Successfully.',
                         showConfirmButton: false,
-                        timer: 2000,
+                        background: '#343436',
+                        heightAuto: '100px',
+                        color: 'white',
+                        timer: 2000
                     })
                 }
                 e.target.reset()

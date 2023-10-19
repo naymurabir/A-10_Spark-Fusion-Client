@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
 import swal from "sweetalert";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const RegisterPage = () => {
 
@@ -21,20 +22,56 @@ const RegisterPage = () => {
 
 
         if (password.length < 6) {
-            swal("Password must be 6 characters long.");
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Password must be 6 characters long.',
+                showConfirmButton: false,
+                background: '#343436',
+                heightAuto: '50px',
+                color: 'white',
+                timer: 2000
+            })
             return;
         }
 
         else if (!/[A-Z]/.test(password)) {
-            swal("Password must have at least one Upper case letter.")
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Password must have at least one Upper case letter.',
+                showConfirmButton: false,
+                background: '#343436',
+                heightAuto: '50px',
+                color: 'white',
+                timer: 2000
+            })
             return;
         }
         else if (!/[@#$%^&+=!]/.test(password)) {
-            swal("Password must have a special character. [hints: @#$%^&+=!]");
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Password must have a special character. [hints: @#$%^&+=!]',
+                showConfirmButton: false,
+                background: '#343436',
+                heightAuto: '50px',
+                color: 'white',
+                timer: 2000
+            })
             return;
         }
         else if (!termsAccepted) {
-            swal("Please accept our terms and conditions before register.");
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Please accept our terms and conditions before register.',
+                showConfirmButton: false,
+                background: '#343436',
+                heightAuto: '50px',
+                color: 'white',
+                timer: 2000
+            })
             return;
         }
 
@@ -42,7 +79,16 @@ const RegisterPage = () => {
             .then(result => {
                 const user = result.user
                 console.log(user);
-                swal("User has been registered successfully.")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'User has been registered successfully.',
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
 
                 // Update user profile
                 updateProfile(user, {

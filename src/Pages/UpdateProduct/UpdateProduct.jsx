@@ -42,7 +42,10 @@ const UpdateProduct = () => {
                         icon: 'success',
                         title: "Products has been updated successfully!",
                         showConfirmButton: false,
-                        timer: 2000,
+                        background: '#343436',
+                        heightAuto: '100px',
+                        color: 'white',
+                        timer: 2000
                     })
                 }
             });

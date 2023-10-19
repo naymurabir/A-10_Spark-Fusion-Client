@@ -8,12 +8,14 @@ import MyCarts from "../Pages/MyCarts/MyCarts";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

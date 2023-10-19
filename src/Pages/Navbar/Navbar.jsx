@@ -3,6 +3,7 @@ import { AuthContext } from "../Providers/AuthProviders";
 import { useContext } from "react";
 import userImg from '../../assets/user.png'
 import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
 
@@ -11,7 +12,16 @@ const Navbar = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-                swal("Logout Successful")
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Logout Successful',
+                    showConfirmButton: false,
+                    background: '#343436',
+                    heightAuto: '100px',
+                    color: 'white',
+                    timer: 2000
+                })
             })
             .catch(error => {
                 console.log();

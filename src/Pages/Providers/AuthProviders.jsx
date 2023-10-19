@@ -41,7 +41,7 @@ const AuthProviders = ({ children }) => {
         })
 
         return () => {
-            unSubscribe()
+            unSubscribe();
         }
     }, [])
 
