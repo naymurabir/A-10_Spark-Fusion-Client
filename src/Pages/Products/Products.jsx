@@ -101,6 +101,13 @@ const Products = () => {
                     <hr className="my-3" />
 
                     <p> Unlock the future with our tech products! From smartphones to smart home devices, our selection offers innovation at your fingertips. Upgrade your digital lifestyle now!</p>
+
+                    <div className="mt-2">
+                        <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                        <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                        <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    </div>
+
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 md:my-5 lg:my-10">

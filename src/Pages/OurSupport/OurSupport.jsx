@@ -10,6 +10,12 @@ const OurSupport = () => {
                 <hr className="my-3" />
 
                 <p> 24/7 Support: We are always here to help with your tech questions and concerns, anytime you need us. Enjoy uninterrupted assistance and peace of mind, knowing that our dedicated team is ready around the clock to provide solutions and ensure your convenience.</p>
+
+                <div className="mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                </div>
             </div>
             <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-10 mb-10 rounded">
                 <div className="relative">

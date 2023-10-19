@@ -61,6 +61,12 @@ const MyCarts = () => {
                 <hr className="my-3" />
 
                 <p> Explore your shopping cart. Review, update, and complete your purchases with ease. Your one-stop destination for managing your selected items before checkout.</p>
+
+                <div className="mt-2">
+                    <span className="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 lg:my-10">
