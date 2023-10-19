@@ -1,12 +1,16 @@
 import Swal from "sweetalert2";
+import './AddProduct.css'
+import { useState } from "react";
 
 const AddProduct = () => {
+
+    const [selectedValue, setSelectedValue] = useState('')
 
     const handleAddProduct = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         const name = form.get('name')
-        const brand_name = form.get('brand')
+        const brand_name = selectedValue
         const image = form.get('image')
         const type = form.get('type')
         const price = form.get('price')
@@ -32,7 +36,7 @@ const AddProduct = () => {
                         icon: 'success',
                         title: 'A product is added Successfully.',
                         showConfirmButton: false,
-                        timer: 1000,
+                        timer: 2000,
                     })
                 }
                 e.target.reset()
@@ -61,8 +65,25 @@ const AddProduct = () => {
                                 <label className="label">
                                     <span className="label-text font-semibold">Brand Name </span>
                                 </label>
-                                <input type="text" name="brand" placeholder="Brand Name..." className="input text-sm input-bordered w-full max-w-xs" />
+
+                                <select
+                                    id="input"
+                                    name="brand"
+                                    className="input text-sm input-bordered w-full max-w-xs"
+                                    value={selectedValue}
+                                    onChange={(e) => setSelectedValue(e.target.value)}
+                                >
+                                    <option>Select Option Brand</option>
+                                    <option value="Google" >Apple</option>
+                                    <option value="Nokia">Samsung</option>
+                                    <option value="Intel">Intel</option>
+                                    <option value="Sony">Sony</option>
+                                    <option value="Apple">Nokia</option>
+                                    <option value="Samsung">Xiaomi</option>
+                                </select>
+
                             </div>
+
                         </div>
 
                         <div className="flex flex-col md:flex-row gap-5 mt-5">
