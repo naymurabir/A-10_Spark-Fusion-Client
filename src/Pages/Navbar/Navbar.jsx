@@ -1,6 +1,23 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProviders";
+import { useContext } from "react";
+import userImg from '../../assets/user.png'
+import swal from "sweetalert";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                swal("Logout Successful")
+            })
+            .catch(error => {
+                console.log();
+                swal(error.message)
+            })
+    }
 
     const navLinks = <>
         <NavLink to="/" className="text-base mr-3 font-semibold">Home</NavLink>
@@ -32,7 +49,30 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                <div className="flex items-center gap-2">
+
+                    {
+                        user ? <div className="flex gap-2">
+                            <div className="flex items-center gap-2"> <h2 className="text-sm font-semibold hidden md:block">{user?.displayName}</h2> <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" /> </div>
+
+                            <button onClick={handleLogOut} className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Log Out</button>
+                        </div>
+                            :
+                            <div className="flex items-center gap-2">
+                                <label >
+                                    <div className="w-10 rounded-full">
+                                        <img src={userImg} />
+                                    </div>
+                                </label>
+
+                                <Link to="/login">
+                                    <button className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Login</button>
+                                </Link>
+                            </div>
+
+                    }
+
+                </div>
             </div>
         </nav>
     );
