@@ -1,10 +1,57 @@
 import { useLoaderData } from "react-router-dom";
 import MyCart from "../MyCart/MyCart";
+import { useState } from "react";
+import swal from "sweetalert";
 
 
 const MyCarts = () => {
 
     const loadedCarts = useLoaderData()
+
+    const [carts, setCarts] = useState(loadedCarts);
+
+    const handleDeleteCart = (id) => {
+        // fetch(`http://localhost:5000/carts/${id}`, {
+        //     method: 'DELETE',
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //     })
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    fetch(`http://localhost:5000/carts/${id}`, {
+                        method: 'DELETE'
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+
+                            if (data.deletedCount > 0) {
+                                const remaining = carts.filter(cart => cart._id !== id)
+                                setCarts(remaining)
+
+                                swal("Poof! Your cart has been deleted!", {
+                                    icon: "success",
+                                });
+                            }
+
+                            swal("The cart has been deleted!", {
+                                icon: "success",
+                            });
+                        })
+                } else {
+                    swal("Your file is safe!");
+                }
+            });
+    }
 
     return (
         <div>
@@ -17,9 +64,11 @@ const MyCarts = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 lg:my-10">
+
                 {
-                    loadedCarts.map(cart => <MyCart key={cart._id} cart={cart}></MyCart>)
+                    carts.map(cart => <MyCart key={cart._id} cart={cart} handleDeleteCart={handleDeleteCart}></MyCart>)
                 }
+
             </div>
 
         </div>

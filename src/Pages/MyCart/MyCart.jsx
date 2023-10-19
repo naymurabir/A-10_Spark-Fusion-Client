@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 
-const MyCart = ({ cart }) => {
+const MyCart = ({ cart, handleDeleteCart }) => {
 
-    const { name, image, brand_name, price } = cart
+    const { _id, name, image, brand_name, price } = cart
+
 
     return (
         <div>
@@ -12,16 +13,17 @@ const MyCart = ({ cart }) => {
                 <div className="card-body">
                     <h2 className='text-xl font-bold text-center'> {name} </h2>
                     <hr />
-                    <div>
-                        <h3 className='text-base font-bold'>Brand: <span className='text-sm font-semibold'>{brand_name}</span></h3>
-                    </div>
-                    <div>
-                    </div>
-                    <div >
-                        <h2 className='text-base font-bold'>Price: <span className='text-sm font-semibold'>${price}</span> </h2>
+                    <div className='flex justify-between'>
+                        <div>
+                            <h3 className='text-base font-bold'>Brand: <span className='text-sm font-semibold'>{brand_name}</span></h3>
+                        </div>
+
+                        <div >
+                            <h2 className='text-base font-bold'>Price: <span className='text-sm font-semibold'>${price}</span> </h2>
+                        </div>
                     </div>
 
-                    <button className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Delete</button>
+                    <button onClick={() => handleDeleteCart(_id)} className='text-lg text-white font-semibold bg-rose-600 hover:bg-rose-400 px-3 py-1 rounded w-full'>Delete</button>
                 </div>
             </div>
         </div>
@@ -29,7 +31,8 @@ const MyCart = ({ cart }) => {
 };
 
 MyCart.propTypes = {
-    cart: PropTypes.object.isRequired
+    cart: PropTypes.object.isRequired,
+    handleDeleteCart: PropTypes.func.isRequired
 }
 
 export default MyCart;

@@ -28,11 +28,11 @@ const ProductDetails = () => {
                 console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
-                        position: 'top-center',
+                        position: 'center',
                         icon: 'success',
-                        title: 'Add to Cart is Successful.',
+                        title: 'Congratulations! Product has been added to My Cart Page.',
                         showConfirmButton: false,
-                        timer: 1500,
+                        timer: 2000,
                     })
                 }
             })
