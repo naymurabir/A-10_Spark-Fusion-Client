@@ -16,6 +16,7 @@ const OurSupport = () => {
                     <span className="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span className="inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
                 </div>
+
             </div>
             <div className="relative max-w-screen-xl p-4 px-4 mx-auto bg-white dark:bg-gray-800 sm:px-6 lg:px-8 py-26 lg:mt-10 mb-10 rounded">
                 <div className="relative">
@@ -89,6 +90,7 @@ const OurSupport = () => {
                                 </li>
                             </ul>
                         </div>
+
                         <div className="relative mt-10 lg:-mx-4 relative-20 lg:mt-0 lg:col-start-1">
                             <div className="relative space-y-4">
                                 <div className="flex items-end justify-center space-x-4 lg:justify-start">
