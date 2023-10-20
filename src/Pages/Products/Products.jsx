@@ -4,11 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import EmptyProducts from "../EmptyProducts/EmptyProducts";
 
 
 const Products = () => {
 
     const brandProducts = useLoaderData()
+    // const brandProducts = []
 
     return (
         <div>
@@ -110,14 +112,20 @@ const Products = () => {
 
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 md:my-5 lg:my-10">
-                    {
-                        brandProducts?.map(product => <Product key={product._id} product={product}></Product>)
-                    }
-                </div>
-            </div>
+                {
 
-        </div>
+                    brandProducts.length > 0 ? <>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 md:my-5 lg:my-10">
+                            {
+                                brandProducts?.map(product => <Product key={product._id} product={product}></Product>)
+                            }
+                        </div>
+
+                    </> : <EmptyProducts></EmptyProducts>
+                }
+            </div >
+        </div >
+
     );
 };
 
