@@ -11,7 +11,7 @@ const MyCarts = () => {
     const [carts, setCarts] = useState(loadedCarts);
 
     const handleDeleteCart = (id) => {
-        // fetch(`http://localhost:5000/carts/${id}`, {
+        // fetch(`https://spark-fusion-server.vercel.app/carts/${id}`, {
         //     method: 'DELETE',
         // })
         //     .then(res => res.json())
@@ -28,7 +28,7 @@ const MyCarts = () => {
         })
             .then((willDelete) => {
                 if (willDelete) {
-                    fetch(`http://localhost:5000/carts/${id}`, {
+                    fetch(`https://spark-fusion-server.vercel.app/carts/${id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())

@@ -26,7 +26,7 @@ const UpdateProduct = () => {
         const products = { name, brand_name, image, type, price, rating, description };
         console.log(products);
 
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://spark-fusion-server.vercel.app/products/${id}`, {
             method: "put",
             headers: {
                 "Content-Type": "application/json",

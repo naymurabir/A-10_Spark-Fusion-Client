@@ -19,7 +19,7 @@ const AddProduct = () => {
 
         console.log(products);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://spark-fusion-server.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

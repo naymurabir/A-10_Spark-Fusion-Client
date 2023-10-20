@@ -29,22 +29,22 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <PrivateRoute> <UpdateProduct></UpdateProduct> </PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/products`)
+                loader: () => fetch(`https://spark-fusion-server.vercel.app/products`)
             },
             {
                 path: '/products/:brand',
                 element: <Products></Products>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
+                loader: ({ params }) => fetch(`https://spark-fusion-server.vercel.app/products/${params.brand}`)
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute> <ProductDetails></ProductDetails> </PrivateRoute>,
-                loader: () => fetch("http://localhost:5000/products")
+                loader: () => fetch("https://spark-fusion-server.vercel.app/products")
             },
             {
                 path: '/carts',
                 element: <PrivateRoute> <MyCarts></MyCarts> </PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/carts')
+                loader: () => fetch('https://spark-fusion-server.vercel.app/carts')
             },
             {
                 path: '/login',
