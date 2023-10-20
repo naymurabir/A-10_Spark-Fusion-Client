@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee"
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const ProductDetails = () => {
 
@@ -10,6 +11,7 @@ const ProductDetails = () => {
 
     const { name, image, brand_name, price, description } = details
 
+    const [showCartButton, setShowCartButton] = useState(true)
 
     const navigate = useNavigate()
     const handleGoHome = () => {
@@ -41,6 +43,7 @@ const ProductDetails = () => {
 
                 }
             })
+        setShowCartButton(false)
     }
 
     return (
@@ -61,7 +64,11 @@ const ProductDetails = () => {
                         <div className="pt-4 flex gap-5">
                             <button onClick={handleGoHome} className='text-white font-semibold bg-rose-600 hover:bg-rose-400 px-4 py-1 rounded'>Go Home</button>
 
-                            <button onClick={handleAddToCart} className='text-white font-semibold bg-rose-600 hover:bg-rose-400 px-4 py-1 rounded'> Add to Cart </button>
+                            {
+                                showCartButton ?
+                                    <button onClick={handleAddToCart} className='text-white font-semibold bg-rose-600 hover:bg-rose-400 px-4 py-1 rounded'> Add to Cart </button>
+                                    : ''
+                            }
                         </div>
                     </div>
                 </div>
