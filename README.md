@@ -6,7 +6,7 @@
 
 # Features_And_Functionalities
 
-- Basically this is an E-commerce website where there is a Home page where there are many of the brands category. Each category have some products based on that brand category. If an user click on the brand card he/she will see the products as well. 
+- Basically this is an e-commerce website where there is a Home page where there are many of the brands category. Each category have some products based on that brand category. If an user click on the brand card he/she will see the products as well. 
 
 - In the products page, each of the products have details and update option. If an user click on the details option he/she can see the details of the product. And can take decision to make cart the product. On the other hand, after clicking on the Update option an admin can change / update the product name, image, type, price, description etc. 
 
