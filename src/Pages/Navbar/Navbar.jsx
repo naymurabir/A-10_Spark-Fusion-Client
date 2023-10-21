@@ -80,10 +80,15 @@ const Navbar = () => {
 
                     {
                         user ? <div className="flex gap-2">
-                            <div className="flex items-center gap-2"> <h2 className="text-sm font-semibold hidden md:block">{user?.displayName}</h2> <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" /> </div>
+                            <div className="flex items-center gap-2"> <h2 className="text-sm font-semibold hidden lg:block">{user?.displayName}</h2> <img className="w-10 h-10 rounded-full hidden md:block" src={user?.photoURL} alt="" /> </div>
 
-                            <button onClick={handleLogOut} className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Log Out</button>
+                            <div className="flex items-center gap-1">
+                                <button onClick={handleLogOut} className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Log Out</button>
+
+                                <input onChange={handleToggle} type="checkbox" className="toggle toggle-primary hidden md:block" />
+                            </div>
                         </div>
+
                             :
                             <div className="flex items-center gap-2">
                                 <label >
@@ -96,7 +101,7 @@ const Navbar = () => {
                                     <button className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Login</button>
                                 </Link>
 
-                                <input onChange={handleToggle} type="checkbox" className="toggle toggle-primary" />
+                                <input onChange={handleToggle} type="checkbox" className="toggle hidden md:block toggle-primary" />
                             </div>
 
                     }
