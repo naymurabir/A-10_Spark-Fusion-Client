@@ -1,11 +1,28 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProviders";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import userImg from '../../assets/user.png'
 import swal from "sweetalert";
 import Swal from "sweetalert2";
 
+
 const Navbar = () => {
+
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
+
+    // Handle Toggle.
+    const handleToggle = (e) => {
+        if (e.target.checked) {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    };
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        const localTheme = localStorage.getItem("theme");
+        document.querySelector("html").setAttribute("data-theme", localTheme);
+    }, [theme]);
 
     const { user, logOut } = useContext(AuthContext)
 
@@ -70,7 +87,7 @@ const Navbar = () => {
                             :
                             <div className="flex items-center gap-2">
                                 <label >
-                                    <div className="w-10 rounded-full">
+                                    <div className="w-10 rounded-full hidden md:block">
                                         <img src={userImg} />
                                     </div>
                                 </label>
@@ -78,6 +95,8 @@ const Navbar = () => {
                                 <Link to="/login">
                                     <button className="bg-[#CE1446] text-white font-semibold px-4 py-2 rounded hover:bg-rose-400">Login</button>
                                 </Link>
+
+                                <input onChange={handleToggle} type="checkbox" className="toggle toggle-primary" />
                             </div>
 
                     }
