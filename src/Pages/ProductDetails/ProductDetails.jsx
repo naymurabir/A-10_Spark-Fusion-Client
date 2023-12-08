@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee"
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 
 const ProductDetails = () => {
 
@@ -48,6 +49,12 @@ const ProductDetails = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Product Details
+                </title>
+            </Helmet>
 
             <div>
                 <div className="flex flex-col lg:flex-row gap-5 md:gap-10 my-5 lg:my-10">

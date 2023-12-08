@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet-async';
 
 const UpdateProduct = () => {
 
@@ -55,6 +56,12 @@ const UpdateProduct = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Products Update
+                </title>
+            </Helmet>
 
             <div>
                 <div className="my-5 text-center ">

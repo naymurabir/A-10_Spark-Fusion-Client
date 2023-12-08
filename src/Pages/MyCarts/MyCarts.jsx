@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import MyCart from "../MyCart/MyCart";
 import { useState } from "react";
 import swal from "sweetalert";
+import { Helmet } from 'react-helmet-async';
 
 
 const MyCarts = () => {
@@ -55,6 +56,13 @@ const MyCarts = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    My Carts
+                </title>
+            </Helmet>
+
             <div className="text-center my-5 md:my-5 lg:my-10 lg:w-3/4 mx-auto">
                 <h2 className="text-xl font-bold text-[#CE1446]">Carts</h2>
                 <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-800">Your Cart List</h1>

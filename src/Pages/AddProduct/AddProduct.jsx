@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 
 const AddProduct = () => {
 
@@ -48,6 +49,13 @@ const AddProduct = () => {
 
     return (
         <div>
+
+            <Helmet>
+                <title>
+                    Add Product
+                </title>
+            </Helmet>
+
             <div className="my-5 text-center ">
                 <h2 className="text-2xl mb-3 text-rose-600 font-bold">Add New Product</h2>
             </div>
